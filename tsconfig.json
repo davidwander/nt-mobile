@@ -1,8 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "skipLibCheck": true,
-    "strict": true,
+    "baseUrl": ".",
     "paths": {
       "@dtos/*": ["./src/dtos/*"],
       "@assets/*": ["./src/assets/*"],
