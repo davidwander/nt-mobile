@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { VStack } from '@gluestack-ui/themed';
+import { Center, VStack, Image, Heading } from '@gluestack-ui/themed';
 import { Animated } from 'react-native';
 
 // Imagens do carrossel
@@ -54,6 +54,21 @@ export function SignIn() {
         defaultSource={images[currentIndex]}
         alt="Carrossel de imagens"
       />
+
+      <Center my="$24">
+        <Image 
+          source={
+            require("../assets/nt-logo.png")}
+            alt="Logo"
+            mt={-200}
+            w={400} 
+            h={400}
+        />
+      </Center>
+
+      <Center>
+        <Heading color="$gray100">Acessar conta</Heading>
+      </Center>
     </VStack>
   );
 }
