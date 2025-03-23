@@ -50,7 +50,8 @@ export function SignIn() {
           width: '100%', 
           height: 550, 
           opacity: fadeAnim,
-          position: "absolute"
+          position: "absolute",
+          backgroundColor: "rgba(0, 0, 0, 0.993)" 
         }}
         source={images[currentIndex]}
         defaultSource={images[currentIndex]}
