@@ -44,8 +44,14 @@ export function SignIn() {
   return (
     <VStack flex={1} bg="$gray400">
       <Animated.Image
-        style={{ width: '100%', height: 550, opacity: fadeAnim }}
+        style={{ 
+          width: '100%', 
+          height: 550, 
+          opacity: fadeAnim,
+          position: "absolute"
+        }}
         source={images[currentIndex]}
+        defaultSource={images[currentIndex]}
         alt="Carrossel de imagens"
       />
     </VStack>
