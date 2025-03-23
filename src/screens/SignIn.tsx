@@ -13,6 +13,8 @@ import Image7 from '@assets/photo07.png';
 import Image8 from '@assets/photo08.png';
 import Image9 from '@assets/photo09.png';
 
+import { Input } from '@components/Input';
+
 const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9];
 
 export function SignIn() {
@@ -55,20 +57,26 @@ export function SignIn() {
         alt="Carrossel de imagens"
       />
 
-      <Center my="$24">
-        <Image 
-          source={
-            require("../assets/nt-logo.png")}
-            alt="Logo"
-            mt={-200}
-            w={400} 
-            h={400}
-        />
-      </Center>
+      <VStack flex={1} px="$10" pb="$16">
+        <Center my="$24">
+          <Image 
+            source={
+              require("../assets/nt-logo.png")}
+              alt="Logo"
+              mt={-200}
+              mb={-30}
+              w={400} 
+              h={400}
+          />
+        </Center>
 
-      <Center>
-        <Heading color="$gray100">Acessar conta</Heading>
-      </Center>
+        <Center gap="$2">
+          <Heading color="$gray100">Acessar conta</Heading>
+
+          <Input placeholder="E-mail" />
+          <Input placeholder="Senha" />
+        </Center>
+      </VStack>
     </VStack>
   );
 }
