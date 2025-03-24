@@ -11,6 +11,10 @@ export function Input({...rest}: Props) {
       px="$2" 
       h="$14" 
       borderRadius="$xl"
+      $focus={{
+        borderWidth: 1,
+        borderColor: "$violet300",
+      }}
     >
       <InputField 
         color="$white" 

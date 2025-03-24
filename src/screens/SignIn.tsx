@@ -72,7 +72,7 @@ export function SignIn() {
         </Center>
 
         <Center gap="$2">
-          <Heading color="$gray100">Acessar conta</Heading>
+          <Heading color="$purple400">Acessar conta</Heading>
 
           <Input placeholder="E-mail" />
           <Input placeholder="Senha" />
