@@ -10,7 +10,7 @@ import { config } from './config/gluestack-ui.config';
 import { Loading } from '@components/Loading';
 import { SignIn } from '@screens/SignIn';
 
-const statusBarColor = config.tokens.colors?.violet500 || "#8b5cf6";
+const statusBarColor = config.tokens.colors?.gray400 || "#323238";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_700Bold, Roboto_400Regular});
