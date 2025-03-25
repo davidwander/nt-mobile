@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Center, VStack, Image, Heading, Text } from '@gluestack-ui/themed';
+import { Center, VStack, Image, Heading, Text, ScrollView } from '@gluestack-ui/themed';
 import { Animated } from 'react-native';
 
 // Imagens do carrossel
@@ -45,62 +45,67 @@ export function SignIn() {
   }, [fadeAnim]);
 
   return (
-    <VStack flex={1} bg="$gray400">
-      <Animated.Image
-        style={{ 
-          width: '100%', 
-          height: 550, 
-          opacity: fadeAnim,
-          position: "absolute",
-          backgroundColor: "rgba(0, 0, 0, 0.993)" 
-        }}
-        source={images[currentIndex]}
-        defaultSource={images[currentIndex]}
-        alt="Carrossel de imagens"
-      />
+    <ScrollView 
+      contentContainerStyle={{ flexGrow: 1 }}
+      showsVerticalScrollIndicator={false}
+    > 
+      <VStack flex={1} bg="$gray400">
+        <Animated.Image
+          style={{ 
+            width: '100%', 
+            height: 550, 
+            opacity: fadeAnim,
+            position: "absolute",
+            backgroundColor: "rgba(0, 0, 0, 0.993)" 
+          }}
+          source={images[currentIndex]}
+          defaultSource={images[currentIndex]}
+          alt="Carrossel de imagens"
+        />
 
-      <VStack flex={1} px="$10" pb="$16">
-        <Center my="$24">
-          <Image 
-            source={
-              require("../assets/nt-logo.png")}
-              alt="Logo"
-              mt={-200}
-              mb={-30}
-              w={400} 
-              h={400}
-          />
-        </Center>
+        <VStack flex={1} px="$10" pb="$16">
+          <Center my="$24">
+            <Image 
+              source={
+                require("../assets/nt-logo.png")}
+                alt="Logo"
+                mt={-200}
+                mb={-30}
+                w={400} 
+                h={400}
+            />
+          </Center>
 
-        <Center gap="$2">
-          <Heading color="$purple400">Acessar conta</Heading>
+          <Center gap="$2">
+            <Heading color="$purple400">Acessar conta</Heading>
 
-          <Input 
-            placeholder="E-mail" 
-            keyboardType="email-address" 
-            autoCapitalize="none"
-          />
-          <Input placeholder="Senha" secureTextEntry />
+            <Input 
+              placeholder="E-mail" 
+              keyboardType="email-address" 
+              autoCapitalize="none"
+            />
+            <Input placeholder="Senha" secureTextEntry />
 
-          <Button title="Acessar" />
-        </Center>
+            <Button title="Acessar" />
+          </Center>
 
-        <Center 
-          flex={1}
-          justifyContent="flex-end"
-          mt="$4"
-        >
-          <Text
-            color="$violet300"
-            fontSize="$sm"
-            mb="$3"
-            fontFamily="$body"
+          <Center 
+            flex={1}
+            justifyContent="flex-end"
+            mt="$4"
           >
-            Ainda não tem acesso?
-          </Text>
-          <Button title="Criar conta" variant="outline" />
-        </Center>
+            <Text
+              color="$violet300"
+              fontSize="$sm"
+              mb="$3"
+              fontFamily="$body"
+            >
+              Ainda não tem acesso?
+            </Text>
+            <Button title="Criar conta" variant="outline" />
+          </Center>
+        </VStack>
       </VStack>
-    </VStack>
+    </ScrollView>
   );
 }
