@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Center, VStack, Image, Heading } from '@gluestack-ui/themed';
+import { Center, VStack, Image, Heading, Text } from '@gluestack-ui/themed';
 import { Animated } from 'react-native';
 
 // Imagens do carrossel
@@ -83,6 +83,22 @@ export function SignIn() {
           <Input placeholder="Senha" secureTextEntry />
 
           <Button title="Acessar" />
+        </Center>
+
+        <Center 
+          flex={1}
+          justifyContent="flex-end"
+          mt="$4"
+        >
+          <Text
+            color="$violet300"
+            fontSize="$sm"
+            mb="$3"
+            fontFamily="$body"
+          >
+            Ainda não tem acesso?
+          </Text>
+          <Button title="Criar conta" variant="outline" />
         </Center>
       </VStack>
     </VStack>
