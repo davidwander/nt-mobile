@@ -31,6 +31,7 @@ export function Button({
         color={variant === "outline" ? "$purple400" : "$white"}
         fontFamily="$heading"
         fontSize="$sm"
+        lineHeight="$32"
       >
         {title}
       </Text>
