@@ -14,6 +14,7 @@ import Image8 from '@assets/photo08.png';
 import Image9 from '@assets/photo09.png';
 
 import { Input } from '@components/Input';
+import { Button } from '@components/Button';
 
 const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9];
 
@@ -80,6 +81,8 @@ export function SignIn() {
             autoCapitalize="none"
           />
           <Input placeholder="Senha" secureTextEntry />
+
+          <Button title="Acessar" />
         </Center>
       </VStack>
     </VStack>
